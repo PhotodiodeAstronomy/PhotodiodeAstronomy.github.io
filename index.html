@@ -32,12 +32,55 @@
             border: 2px solid #fff;
             border-radius: 10px;
         }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding: 10px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .lightbox img {
+            margin: auto;
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        .lightbox:target {
+            display: block;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <h1>My Astrophotography Projects</h1>
     <div class="gallery">
-        <img src="https://github.com/PhotodiodeAstronomy/PhotodiodeAstronomy.github.io/blob/750e3760136ae583098e3b6b4507d5e80b26e422/wr134%20Sketch%20Magma%20Pallette.png" alt="wr134">
+        <a href="#wr134">
+            <img src="https://github.com/PhotodiodeAstronomy/PhotodiodeAstronomy.github.io/raw/750e3760136ae583098e3b6b4507d5e80b26e422/wr134%20Sketch%20Magma%20Pallette.png" alt="wr134">
+        </a>
+        <div id="wr134" class="lightbox">
+            <a href="#" class="close">&times;</a>
+            <img src="https://github.com/PhotodiodeAstronomy/PhotodiodeAstronomy.github.io/raw/750e3760136ae583098e3b6b4507d5e80b26e422/wr134%20Sketch%20Magma%20Pallette.png" alt="wr134">
+        </div>
     </div>
 </body>
 </html>
+
